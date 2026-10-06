@@ -6,24 +6,10 @@
 
 ## Phạm Phương Nam
 
-### Điều đã học
-(viết vài dòng)
-
 ### Trả lời câu hỏi phần đọc
-- pytest tự tìm bài kiểm thử dựa vào quy tắc đặt tên nào?
-  (trả lời)
-- Appium client, Appium server và driver lần lượt chạy ở đâu?
-  (trả lời)
+- pytest tự tìm bài kiểm thử dựa vào chữ cái và ID
+- Appium client, Appium server và driver lần lượt chạy ở trong visual studio code
 
 ### Lỗi gặp khi cài đặt và cách sửa
-(ghi lại)
-
-### Dùng AI
-- Đã hỏi AI điều gì:
-- Câu trả lời có đúng không:
-- Mình hiểu thêm được gì:
-
----
-
-## Thành viên 2: (họ tên)
-(copy các mục như trên)
+Kết quả dumb khi thấy test-Username do thời gian tìm khi giao diện chưa vẽ xong
+Chỉnh sửa chờ tối đa 10 giây cho đến khi ô username xuất hiện
