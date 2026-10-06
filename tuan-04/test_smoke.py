@@ -2,6 +2,8 @@ import pytest
 from appium import webdriver
 from appium.options.android import UiAutomator2Options
 from appium.webdriver.common.appiumby import AppiumBy
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 
 @pytest.fixture
@@ -21,8 +23,10 @@ def driver():
 
 
 def test_smoke(driver):
-    # Tìm ô nhập tên đăng nhập trên màn hình đăng nhập
-    o_username = driver.find_element(AppiumBy.ACCESSIBILITY_ID, "test-Username")
+    # Chờ tối đa 10 giây cho tới khi ô username xuất hiện
+    o_username = WebDriverWait(driver, 10).until(
+        EC.presence_of_element_located((AppiumBy.ACCESSIBILITY_ID, "test-Username"))
+    )
 
     # Kiểm tra ô đó có hiển thị
     assert o_username.is_displayed()
